@@ -20,3 +20,7 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+#ignore env and secrets files
+/.env
+/config/secrets.yml

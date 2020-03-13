@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2020_03_12_141111) do
 
   create_table "payments", force: :cascade do |t|
     t.bigint "check_id"
-    t.integer "check_total"
+    t.integer "amount"
     t.boolean "credit"
     t.string "last_four"
     t.string "stripe_id"
