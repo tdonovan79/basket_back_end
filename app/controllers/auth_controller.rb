@@ -1,7 +1,7 @@
 class AuthController < ApplicationController
     def login
-        employee = Employee.find_by(username: employee_params[:username])
-        if employee &&employee.authenticate(user_params[:password])
+        employee = Employee.find_by(login: employee_params[:login])
+        if employee &&employee.authenticate(employee_params[:password])
             payload = {employee_id: employee.id}
             token = JWT.encode(payload, secret, 'HS256')
             render json: {employee:  employee, token: token}
@@ -24,6 +24,6 @@ class AuthController < ApplicationController
     private
 
     def employee_params
-        params.permit(:username, :password)
+        params.permit(:username, :login, :password)
     end
 end

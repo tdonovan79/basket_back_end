@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   get '/auth', to: 'auth#persist'
   post '/charge_adapter', to: 'charge_adapter#create'
   resources :employees
+  post '/get_checks', to: 'checks#get_checks'
+  resources :checks
 end
