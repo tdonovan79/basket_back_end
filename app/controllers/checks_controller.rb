@@ -14,7 +14,7 @@ class ChecksController < ApplicationController
 
     def create
         @check = Check.create(employee_id: params[:employee][:id], open: true)
-        debugger
+        # debugger
         render json: @check
     end
 

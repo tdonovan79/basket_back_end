@@ -6,6 +6,10 @@ class SalesController < ApplicationController
     end
 
     def delete_from_check
-        @sale = Sale.all.find{ |sale| sale.product_id == params[:product_id] && sale.check_id ==params{:check_id}}
+        @sale = Sale.all.find{ |sale| sale.product_id == params[:product_id] && sale.check_id ==params[:check_id]}
+        # byebug
+        @sale.destroy
+        # byebug
+        render json: {}
     end
 end

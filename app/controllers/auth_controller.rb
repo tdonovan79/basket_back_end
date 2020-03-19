@@ -6,7 +6,7 @@ class AuthController < ApplicationController
             token = JWT.encode(payload, secret, 'HS256')
             render json: {employee:  employee, token: token}
         else
-            render json: {errors:  employee.errors.full_messages} 
+            render json: {error:  'Incorrect login or password'} 
         end
     end
 
