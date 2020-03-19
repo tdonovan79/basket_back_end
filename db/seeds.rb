@@ -25,10 +25,10 @@ Check.all.each do |this_check|
     end
 end
 
-Check.all.each do |this_check|
-    if rand(3) % 2 == 1
-        Payment.create(check: this_check, amount: this_check.products.map(&:price).sum, credit: true, last_four: 4242)
-        this_check.open = false
-    end
-end
+# Check.all.each do |this_check|
+#     if rand(3) % 2 == 1
+#         Payment.create(check: this_check, amount: this_check.products.map(&:price).sum, credit: true, last_four: 4242)
+#         this_check.open = false
+#     end
+# end
 

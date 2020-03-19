@@ -6,4 +6,8 @@ Rails.application.routes.draw do
   resources :employees
   post '/get_checks', to: 'checks#get_checks'
   resources :checks
+  resources :products
+  resources :sales
+  resources :payments
+  post '/delete_from_check', to: 'sales#delete_from_check'
 end

@@ -12,6 +12,12 @@ class ChecksController < ApplicationController
         render json: @checks, each_serializer: CheckSerializer
     end
 
+    def create
+        @check = Check.create(employee_id: params[:employee][:id], open: true)
+        debugger
+        render json: @check
+    end
+
     private
     def check_params
         params.permit(employee:[:id, :login, :username])
