@@ -17,6 +17,14 @@ class PaymentsController < ApplicationController
     #delete payment and reopen check
     def reopen_check
         @payment = Payment.all.find_by(check_id: params[:check_id])
+        #reopen on Stripe
+        Stripe.api_key = ENV['STRIPE_SEC']
+        refund = Stripe::Refund.create({
+            charge: @payment.stripe_id
+        })
+
+
+        
         @payment.destroy
         @check = Check.all.find(params[:check_id])
         @check.open = true
