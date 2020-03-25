@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :sales
   resources :payments
   post '/delete_from_check', to: 'sales#delete_from_check'
+  post '/reopen_check', to: 'payments#reopen_check'
 end

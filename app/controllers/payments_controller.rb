@@ -14,4 +14,13 @@ class PaymentsController < ApplicationController
             )
         render json: @payment
     end
+    #delete payment and reopen check
+    def reopen_check
+        @payment = Payment.all.find_by(check_id: params[:check_id])
+        @payment.destroy
+        @check = Check.all.find(params[:check_id])
+        @check.open = true
+        @check.save
+        render json: {response: 'success'}
+    end
 end
