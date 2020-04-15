@@ -19,4 +19,5 @@ Basket is a web-based POS system built using React App, withimpletmentatin of Ho
   - `Ruby on Rails` - main framework used building out back end of app
   - `PostgreSQL` - database management system 
   - `JWT` - encodes/decodes the web tokens for user authentication
+  - `bcrypt` - encrypts/decrypts user's passwords
   - `Heroku` - used to deploy back end of app
