@@ -4,7 +4,7 @@ Basket is a web-based POS system built using React App, withimpletmentatin of Ho
 
 [Front End Github](https://github.com/tdonovan79/basket_front_end)<br/>
 [Live App](https://tdonovan79.github.io/basket_front_end/)<br/>
-[Video Demo](https://youtu.be/k0OjTeKv4ZI)
+[Video Demo](https://www.youtube.com/watch?v=jhEDriz6Y_k&feature=youtu.be)
 
 ## Features
   1. Login and user authentication - From the options screen, a new employee can be created, and existing employees can log in with their username and password. The user tokens used for authentication are encoded using JWT.
